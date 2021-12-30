@@ -1,0 +1,12 @@
+extends layout 
+
+block content
+    header 
+        h1= 'Message Board'
+    main    
+        section.form-container  
+            form(method='POST' action='/new')
+            input(type="text", placeholder='title', name='title' id='title')
+            textarea(name="desc", cols="30", rows="10")
+            input(type='text' placeholder='username', name='username', id='username')
+            button(type='submit', id='submit')= 'post'     
